@@ -1,0 +1,20 @@
+print("Welcome to this information collection page")  #基本思路是做一个信息采集的程序流程
+info=[0,0,0]                                          #初始化一个空的list用来存放数据
+age = input("Input your age :")
+age = int(age)
+info[0]=age                                           #将年龄填入list的第一个数据中，下同
+if age >= 60:
+    print("Sorry, you're too old to enter this collection!")
+elif age >= 18:
+    gender = input("You are a girl or boy:")
+    if gender == "girl":
+        info[1] = gender
+        telenum = input("Please input your telephone number:")
+        info[2] = telenum
+        print("age: %d, gender: %s telephone: %s" %(info[0],info[1],info[2]))    #输出采集到的所有信息
+    else:
+        print("Boys are not welcome to this test!")
+
+else:
+    print("Sorry, you're too young to enter this test!")
+
